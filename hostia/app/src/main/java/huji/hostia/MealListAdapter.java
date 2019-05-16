@@ -48,7 +48,12 @@ public class MealListAdapter extends ListAdapter<Meal, MealListAdapter.MealHolde
 
         MealHolder(View itemView) {
             super(itemView);
+//            description = itemView.findViewById(R.id.meal_description);
+            description = itemView.findViewById(R.id.meal_name);
+            name = itemView.findViewById(R.id.meal_name);
+            stock = itemView.findViewById(R.id.meal_stock);
         }
+
         @Override
         public boolean onLongClick(View v) {
             return true;
