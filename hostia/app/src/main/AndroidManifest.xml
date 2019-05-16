@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AvailableMeals"
+            android:name=".AvailableMealsActivity"
             android:label="@string/title_activity_available_meals" />
         <activity
             android:name=".Login"
