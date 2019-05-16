@@ -64,7 +64,7 @@
         android:layout_marginTop="13dp"
         android:layout_marginBottom="52dp"
         android:gravity="top|start"
-        android:text="pizza"
+        android:text="Pizza"
         android:textSize="25sp" />
 
 
