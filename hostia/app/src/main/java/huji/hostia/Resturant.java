@@ -7,12 +7,12 @@ import java.util.ArrayList;
 public class Resturant {
     private Long id;
     private String name;
-    private MealCategory category;
+    private Meal.MealCategory category;
     private ArrayList<Meal> meals;
     private String lat, lon;
 
 
-    public Resturant(long id, String name, MealCategory category, Location location) {
+    public Resturant(long id, String name, Meal.MealCategory category, Location location) {
         this.id = id;
         this.name = name;
         this.category = category;
@@ -39,11 +39,11 @@ public class Resturant {
     }
 
 
-    public MealCategory getCategory() {
+    public Meal.MealCategory getCategory() {
         return category;
     }
 
-    public void setCategory(MealCategory category) {
+    public void setCategory(Meal.MealCategory category) {
         this.category = category;
     }
 
