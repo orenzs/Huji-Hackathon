@@ -25,7 +25,7 @@ public class MyViewModel extends ViewModel {
 
     private MutableLiveData<ArrayList<Meal>> meals;
     private MutableLiveData<ArrayList<User>> users;
-    private MutableLiveData<ArrayList<Resturant>> restaurants;
+    private MutableLiveData<ArrayList<Restaurant>> restaurants;
 
     public LiveData<ArrayList<User>> getUsers() {
         if (users == null) {
@@ -71,7 +71,7 @@ public class MyViewModel extends ViewModel {
         });
     }
 
-    public LiveData<ArrayList<Resturant>> getRestaurants() {
+    public LiveData<ArrayList<Restaurant>> getRestaurants() {
         if (restaurants == null) {
             restaurants = new MutableLiveData<>();
             loadRestaurants();
@@ -86,10 +86,10 @@ public class MyViewModel extends ViewModel {
                 db.collection("donors").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        ArrayList<Resturant> restaurantsFromDB = new ArrayList<>();
+                        ArrayList<Restaurant> restaurantsFromDB = new ArrayList<>();
                         if (task.isSuccessful()) {
                             for(DocumentSnapshot document : task.getResult()) {
-                                restaurantsFromDB.add(document.toObject(Resturant.class));
+                                restaurantsFromDB.add(document.toObject(Restaurant.class));
                             }
                             restaurants.setValue(restaurantsFromDB);
                         }
@@ -104,9 +104,9 @@ public class MyViewModel extends ViewModel {
                 db.collection("donors").addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
-                        ArrayList<Resturant> restaurantsFromDB = new ArrayList<>();
+                        ArrayList<Restaurant> restaurantsFromDB = new ArrayList<>();
                         for (DocumentSnapshot document : queryDocumentSnapshots) {
-                            restaurantsFromDB.add(document.toObject(Resturant.class));
+                            restaurantsFromDB.add(document.toObject(Restaurant.class));
                         }
                         restaurants.setValue(restaurantsFromDB);
                     }
