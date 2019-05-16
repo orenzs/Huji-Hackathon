@@ -23,5 +23,3 @@ class User {
     }
 }
 
-
-//todo: public Task<Location> getLastLocation ()
