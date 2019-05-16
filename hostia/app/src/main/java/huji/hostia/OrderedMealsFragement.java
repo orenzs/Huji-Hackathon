@@ -1,5 +1,7 @@
 package huji.hostia;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,8 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 
-public class OrderedMealsFragement extends Fragment {
+
+public class OrderedMealsFragement extends Fragment implements OnClickCallBack{
     private MealListAdapter adapter = new MealListAdapter();
 
     public OrderedMealsFragement() {
@@ -23,19 +27,34 @@ public class OrderedMealsFragement extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-//        RecyclerView recyclerView = findViewById(R.id.chat_message_recycler);
-//
-//        recyclerView.setLayoutManager(new LinearLayoutManager(
-//                this, LinearLayoutManager.VERTICAL, false));
-//
-//        recyclerView.setAdapter(adapter);
-//
-//        adapter.callback = this;
+        View v = inflater.inflate(R.layout.fragment_ordered_meals_fragement, container, false);
+
+        RecyclerView recyclerView = v.findViewById(R.id.ordered_meals_recycler_view);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+
+        recyclerView.setAdapter(adapter);
+
+        adapter.onClickCallBack = this;
+
+        MyViewModel viewModel = ViewModelProviders.of(this).get(MyViewModel.class);
+        viewModel.getMeals().observe(this, new Observer<ArrayList<Meal>>() {
+            @Override
+            public void onChanged(@Nullable ArrayList<Meal> meals) {
+
+            }
+        });
         return inflater.inflate(R.layout.fragment_ordered_meals_fragement, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onMealClick(Meal meal) {
+        ((MainEaterActivity)getActivity()).onClickOrderedMeal(meal);
+
     }
 }

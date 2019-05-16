@@ -69,4 +69,7 @@ public class MainEaterActivity extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
+    public void onClickOrderedMeal(Meal meal) {
+        //TODO: implement
+    }
 }
