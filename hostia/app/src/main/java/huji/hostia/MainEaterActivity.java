@@ -13,6 +13,11 @@ import android.view.MenuItem;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 
 public class MainEaterActivity extends AppCompatActivity {
@@ -67,6 +72,21 @@ public class MainEaterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_available_meals);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        Meal meal = new Meal("hamburger", 16L, 3, "yam yam");
+        Log.d("View Model", "blablabla");
+        Log.d("View Model", meal.getDescription());
+
+
+        FirebaseFirestore.getInstance().collection("meals2").document(meal.getId().toString()).set(meal)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("View Model", "Success!!!");
+                    }
+                });
+
+
+
     }
 
     public void onClickOrderedMeal(Meal meal) {

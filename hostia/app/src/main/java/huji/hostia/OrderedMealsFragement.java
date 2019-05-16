@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 
 public class OrderedMealsFragement extends Fragment implements OnClickCallBack{
     private MealListAdapter adapter = new MealListAdapter();
-
+    private final static String TAG = "Ordered meals fragment";
     public OrderedMealsFragement() {
         // Required empty public constructor
     }
@@ -41,7 +42,8 @@ public class OrderedMealsFragement extends Fragment implements OnClickCallBack{
         viewModel.getMeals().observe(this, new Observer<ArrayList<Meal>>() {
             @Override
             public void onChanged(@Nullable ArrayList<Meal> meals) {
-
+                adapter.submitList(meals);
+                Log.d(TAG, "onChanged");
             }
         });
         return inflater.inflate(R.layout.fragment_ordered_meals_fragement, container, false);
