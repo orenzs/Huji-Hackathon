@@ -9,8 +9,7 @@ public class Resturant {
     private String name;
     private MealCategory category;
     private ArrayList<Meal> meals;
-    private String lat;
-    private String lon;
+    private String lat, lon;
 
 
     public Resturant(long id, String name, MealCategory category, Location location) {
