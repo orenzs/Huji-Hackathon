@@ -4,7 +4,7 @@ import android.location.Location;
 
 import java.util.ArrayList;
 
-public class Resturant {
+public class Restaurant {
     private Long id;
     private String name;
     private Meal.MealCategory category;
@@ -12,7 +12,7 @@ public class Resturant {
     private String lat, lon;
 
 
-    public Resturant(long id, String name, Meal.MealCategory category, Location location) {
+    public Restaurant(long id, String name, Meal.MealCategory category, Location location) {
         this.id = id;
         this.name = name;
         this.category = category;
