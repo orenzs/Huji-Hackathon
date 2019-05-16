@@ -24,6 +24,96 @@ public class MyViewModel extends ViewModel {
     Executor executor = Executors.newSingleThreadExecutor();
 
     private MutableLiveData<ArrayList<Meal>> meals;
+    private MutableLiveData<ArrayList<User>> users;
+    private MutableLiveData<ArrayList<Resturant>> restaurants;
+
+    public LiveData<ArrayList<User>> getUsers() {
+        if (users == null) {
+            users = new MutableLiveData<>();
+            loadUsers();
+        }
+        return users;
+    }
+
+    private void loadUsers() {
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                db.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        ArrayList<User> usersFromDB = new ArrayList<>();
+                        if (task.isSuccessful()) {
+                            for(DocumentSnapshot document : task.getResult()) {
+                                usersFromDB.add(document.toObject(User.class));
+                            }
+                            users.setValue(usersFromDB);
+                        }
+                    }
+                });
+            }
+        });
+
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                db.collection("users").addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                        ArrayList<User> usersFromDB = new ArrayList<>();
+                        for (DocumentSnapshot document : queryDocumentSnapshots) {
+                            usersFromDB.add(document.toObject(User.class));
+                        }
+                        users.setValue(usersFromDB);
+                    }
+                });
+            }
+        });
+    }
+
+    public LiveData<ArrayList<Resturant>> getRestaurants() {
+        if (restaurants == null) {
+            restaurants = new MutableLiveData<>();
+            loadRestaurants();
+        }
+        return restaurants;
+    }
+
+    private void loadRestaurants() {
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                db.collection("donors").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        ArrayList<Resturant> restaurantsFromDB = new ArrayList<>();
+                        if (task.isSuccessful()) {
+                            for(DocumentSnapshot document : task.getResult()) {
+                                restaurantsFromDB.add(document.toObject(Resturant.class));
+                            }
+                            restaurants.setValue(restaurantsFromDB);
+                        }
+                    }
+                });
+            }
+        });
+
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                db.collection("donors").addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                        ArrayList<Resturant> restaurantsFromDB = new ArrayList<>();
+                        for (DocumentSnapshot document : queryDocumentSnapshots) {
+                            restaurantsFromDB.add(document.toObject(Resturant.class));
+                        }
+                        restaurants.setValue(restaurantsFromDB);
+                    }
+                });
+            }
+        });
+    }
 
     public LiveData<ArrayList<Meal>> getMeals() {
         if (meals == null) {
@@ -34,7 +124,6 @@ public class MyViewModel extends ViewModel {
     }
 
     private void loadMeals() {
-
         executor.execute(new Runnable() {
             @Override
             public void run() {
