@@ -18,7 +18,7 @@ public class UsersLogin extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        Intent myIntent = new Intent(UsersLogin.this, AvailableMealsActivity.class);
+        Intent myIntent = new Intent(UsersLogin.this, MainEaterActivity.class);
         myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(myIntent);
     }
