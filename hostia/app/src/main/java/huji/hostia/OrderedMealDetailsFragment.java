@@ -24,8 +24,7 @@ public class OrderedMealDetailsFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         MyViewModel viewModel = ViewModelProviders.of(this).get(MyViewModel.class);
         viewModel.getMeals().observe(this, new Observer<ArrayList<Meal>>() {

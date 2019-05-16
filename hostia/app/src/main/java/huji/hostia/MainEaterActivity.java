@@ -67,14 +67,6 @@ public class MainEaterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_available_meals);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        ViewMo
-        MyViewModel viewModel = ViewModelProvider.of(this).get(MyViewModel.class);
-        viewModel.getMeals().observe(this, new Observer<ArrayList<Meal>>() {
-            @Override
-            public void onChanged( ArrayList<ChatMessage> dbMessages) {
-                adapter.submitList(new ArrayList<>(dbMessages));
-            }
-        });
     }
 
 }

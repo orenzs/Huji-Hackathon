@@ -11,13 +11,15 @@ public class Meal {
     private ArrayList<MealCategory> category;
     private LongSparseArray<Long> orders;  // Map<ID, Number_of_orders>
     private int stock;
+    private String description;
 
 
-    public Meal(String name, Long id, ArrayList<MealCategory> category, int stock) {
+    public Meal(String name, Long id, ArrayList<MealCategory> category, int stock, String description) {
         this.name = name;
         ID = id;
         this.category = category;
         this.stock = stock;
+        this.description = description;
         this.orders = new LongSparseArray<>();
     }
 
@@ -25,7 +27,7 @@ public class Meal {
         return category;
     }
 
-    public int getStock() {
+    int getStock() {
         return stock;
     }
 
@@ -38,8 +40,16 @@ public class Meal {
         this.orders.put(ID, size);
     }
 
-    public Long getID() {
+    Long getID() {
         return ID;
+    }
+
+    String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     enum MealCategory {
