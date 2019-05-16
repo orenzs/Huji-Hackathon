@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="huji.hostia">
 
     <application
         android:allowBackup="true"
@@ -9,23 +6,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RestaurantMealsActivity">
-        </activity>
+        <activity android:name=".UsersLogin"></activity>
         <activity
-            android:name=".MainEaterActivity">
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RestaurantMealsActivity"></activity>
         <activity
-            android:name=".Login"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme">
-        </activity>
-        <activity android:name=".MainActivity">
-        </activity>
-    </application>
-
-</manifest>
+            android:name=".AvailableMealsActivity"
+            android:label="@string/title_activity_available_meals" />
+        <activity android:name=".DonorsLogin" />
+</application>
