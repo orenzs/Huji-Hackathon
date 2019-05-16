@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".AvailableMeals"
+            android:label="@string/title_activity_available_meals"></activity>
+        <activity
             android:name=".Login"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme">
