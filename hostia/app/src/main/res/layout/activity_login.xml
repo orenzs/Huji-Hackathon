@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <include layout="@layout/content_login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button2"
+            android:textStyle="bold"
+            android:background="#ad3442"
+            android:layout_width="match_parent"
+            android:textSize="200px"
+            android:layout_height="367dp"
+            android:text="Users Login" />
+
+        <Button
+            android:id="@+id/button3"
+            android:background="#c9b530"
+            android:layout_width="match_parent"
+            android:layout_height="358dp"
+            android:textSize="200px"
+            android:textAlignment="center"
+            android:text="Restaurant Login" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
