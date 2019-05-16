@@ -2,14 +2,6 @@ package huji.hostia;
 
 import java.util.ArrayList;
 
-enum MealCategory {
-    DAIRY,
-    MEAT,
-    BREAD,
-    SOUP,
-    VEGTABLES,
-    OTHER
-}
 
 public class Meal {
     private String name;
@@ -33,6 +25,15 @@ public class Meal {
 
     public String getName() {
         return name;
+    }
+
+    enum MealCategory {
+        DAIRY,
+        MEAT,
+        BREAD,
+        SOUP,
+        VEGTABLES,
+        OTHER
     }
 }
 
