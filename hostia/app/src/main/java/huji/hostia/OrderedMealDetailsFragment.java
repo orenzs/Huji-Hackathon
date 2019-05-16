@@ -1,5 +1,8 @@
 package huji.hostia;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProvider;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 
 
 public class OrderedMealDetailsFragment extends Fragment {
@@ -23,6 +27,13 @@ public class OrderedMealDetailsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        MyViewModel viewModel = ViewModelProviders.of(this).get(MyViewModel.class);
+        viewModel.getMeals().observe(this, new Observer<ArrayList<Meal>>() {
+            @Override
+            public void onChanged(@Nullable ArrayList<Meal> meals) {
+
+            }
+        });
         return inflater.inflate(R.layout.fragment_ordered_meal_details, container, false);
     }
 

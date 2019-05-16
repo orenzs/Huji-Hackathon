@@ -1,5 +1,7 @@
 package huji.hostia;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
@@ -10,6 +12,8 @@ import android.view.MenuItem;
 
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
+
+import java.util.ArrayList;
 
 public class MainEaterActivity extends AppCompatActivity {
 
@@ -63,6 +67,14 @@ public class MainEaterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_available_meals);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        ViewMo
+        MyViewModel viewModel = ViewModelProvider.of(this).get(MyViewModel.class);
+        viewModel.getMeals().observe(this, new Observer<ArrayList<Meal>>() {
+            @Override
+            public void onChanged( ArrayList<ChatMessage> dbMessages) {
+                adapter.submitList(new ArrayList<>(dbMessages));
+            }
+        });
     }
 
 }
