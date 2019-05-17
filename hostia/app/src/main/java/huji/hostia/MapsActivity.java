@@ -57,7 +57,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             title = "Rice";
             pos = new LatLng(31.773749,35.1700529);
         }
-        if (restaurantId == "Huji") {
+        if (restaurantId == "Adom") {
             title = "Rice";
             pos = new LatLng(31.7752192,35.1409427);
         }

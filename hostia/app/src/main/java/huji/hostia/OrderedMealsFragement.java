@@ -46,7 +46,7 @@ public class OrderedMealsFragement extends Fragment implements MealRecyclerUtils
                     if (meal.ordered)
                         orderedMeals.add(meal);
                 }
-                adapter.submitList(orderedMeals);
+                adapter.submitList(new ArrayList<>(orderedMeals));
                 Log.d(TAG, "onChanged");
             }
         });

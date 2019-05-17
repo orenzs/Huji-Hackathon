@@ -42,10 +42,10 @@ public class RestaurantMealsActivity extends AppCompatActivity {
             public void onChanged(@Nullable ArrayList<Meal> meals) {
                 ArrayList<Meal> availableMeals = new ArrayList<>();
                 for (Meal meal : meals) {
-                    if (!meal.ordered)
+                    if (meal.getName().equals("Aroma"))
                         availableMeals.add(meal);
                 }
-                adapter.submitList(availableMeals);
+                adapter.submitList(new ArrayList<>(availableMeals));
             }
         });
     }

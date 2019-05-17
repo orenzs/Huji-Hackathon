@@ -52,7 +52,7 @@ public class AvailableMealsFragment extends Fragment implements MealRecyclerUtil
                     if (!meal.ordered)
                         availableMeals.add(meal);
                 }
-                adapter.submitList(availableMeals);
+                adapter.submitList(new ArrayList<>(availableMeals));
                 Log.d(TAG, "onChanged");
             }
         });
