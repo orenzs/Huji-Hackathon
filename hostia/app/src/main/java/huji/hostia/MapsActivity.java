@@ -23,7 +23,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        String restaurantId = getIntent().getStringExtra("restaurantId");
+        restaurantId = getIntent().getStringExtra("restaurantId");
     }
 
 
@@ -68,5 +68,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         mMap.addMarker(new MarkerOptions().position(pos).title(title));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(pos));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pos, 15.0f));
     }
 }

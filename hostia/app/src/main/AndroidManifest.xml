@@ -30,9 +30,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
         <activity android:name=".MealAdder_a" />
         <activity android:name=".UsersLogin" />
         <activity
@@ -48,8 +45,7 @@
         <activity android:name=".DonorsLogin" />
         <activity android:name=".RestaurantMealsActivity" />
         <activity android:name=".MainEaterActivity" />
-        <activity android:name=".MapsActivity"
-            tools:ignore="DuplicateActivity" />
+        <activity android:name=".MapsActivity" />
     </application>
 
 </manifest>

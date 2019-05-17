@@ -62,6 +62,7 @@ public class OrderedMealsFragement extends Fragment implements MealRecyclerUtils
     @Override
     public void mealOnClick(Meal meal) {
 //        Intent intent = new Intent(OrderedMealsFragement.this, MapsActivity.class).putExtra("restaurantId", meal.getName());
-//        startActivity(intent);
+        Intent intent = new Intent(this.getContext(), MapsActivity.class).putExtra("restaurantId", meal.getName());
+        startActivity(intent);
     }
 }
