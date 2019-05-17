@@ -7,7 +7,7 @@ public class Meal {
     private final String name;
     private final Long id;
     private LongSparseArray<Long> orders;  // Map<id, Number_of_orders>
-    private final int stock;
+    private final Integer stock;
     private final String description;
 
 
@@ -27,8 +27,8 @@ public class Meal {
     }
 
 
-    int getStock() {
-        return stock;
+    String getStock() {
+        return stock.toString();
     }
 
     public String getName() {

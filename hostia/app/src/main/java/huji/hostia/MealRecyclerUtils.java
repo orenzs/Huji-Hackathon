@@ -64,17 +64,25 @@ public class MealRecyclerUtils {
         @Override
         public void onBindViewHolder(@NonNull MealHolder holder, int position) {
             Meal meal = getItem(position);
-            holder.text.setText(meal.getDescription());
+            holder.description.setText(meal.getDescription());
+            holder.name.setText(meal.getName());
+            holder.stock.setText(meal.getStock());
         }
     }
 
 
     static class MealHolder extends RecyclerView.ViewHolder {
-        public final TextView text;
+        public final TextView description;
+        public final TextView name;
+        public final TextView stock;
+
 
         public MealHolder(View itemView) {
             super(itemView);
-            text = itemView.findViewById(R.id.meal_description);
+            description = itemView.findViewById(R.id.meal_description);
+            name = itemView.findViewById(R.id.meal_name);
+            stock = itemView.findViewById(R.id.meal_stock);
+
         }
     }
 
