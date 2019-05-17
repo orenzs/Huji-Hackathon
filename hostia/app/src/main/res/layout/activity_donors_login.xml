@@ -7,6 +7,18 @@
     android:background="#C6B272"
     tools:context=".DonorsLogin">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="305dp"
+        android:layout_height="213dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="52dp"
+        app:srcCompat="@mipmap/logo_hostia_res" />
+
     <Button
         android:id="@+id/donorsLoginBtn"
         android:layout_width="171dp"
@@ -16,7 +28,7 @@
         android:layout_marginBottom="150dp"
         android:background="#824554"
         android:text="Login"
-        android:textColor="#ffff" />
+        android:textColor="#070707" />
 
     <EditText
         android:id="@+id/editText3"
@@ -26,6 +38,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
         android:ems="10"
+        android:textColor="#824554"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -36,6 +49,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="347dp"
         android:ems="10"
+        android:textColor="#824554"
+
         android:inputType="textPassword" />
 
     <TextView
@@ -46,6 +61,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="253dp"
         android:layout_marginEnd="196dp"
+        android:textColor="#824554"
+
         android:text="Email / User name" />
 
     <TextView
@@ -55,6 +72,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="325dp"
+        android:textColor="#824554"
+
         android:layout_marginEnd="247dp"
         android:text="Password" />
+
 </RelativeLayout>

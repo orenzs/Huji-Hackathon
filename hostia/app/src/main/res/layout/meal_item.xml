@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#E8E7E7"
+    android:background="#824554"
     android:paddingTop="8dp">
 
     <!--meal name-->
@@ -14,7 +14,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/meal_block"
+        android:background="824554"
         android:gravity="center_vertical|start"
         android:padding="8dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -35,6 +35,7 @@
         android:layout_marginBottom="60dp"
         android:gravity="center"
         android:text="0/0"
+        android:textColor="#C6B272"
         android:textStyle="bold" />
 
     <TextView
@@ -51,6 +52,7 @@
         android:layout_marginBottom="15dp"
         android:gravity="center|start"
         android:text="very good pizza with olives very good pizza with olives. very good pizza with olives"
+        android:textColor="#C6B272"
         android:textSize="13sp" />
 
     <TextView
@@ -65,6 +67,7 @@
         android:layout_marginBottom="52dp"
         android:gravity="top|start"
         android:text="Pizza"
+        android:textColor="#C6B272"
         android:textSize="25sp" />
 
 
