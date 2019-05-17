@@ -48,8 +48,6 @@
         <activity android:name=".DonorsLogin" />
         <activity android:name=".RestaurantMealsActivity" />
         <activity android:name=".MainEaterActivity" />
-        <activity android:name=".MapsActivity"
-            tools:ignore="DuplicateActivity" />
     </application>
 
 </manifest>
