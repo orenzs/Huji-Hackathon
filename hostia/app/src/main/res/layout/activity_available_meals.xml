@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2C2926"
     tools:context=".MainEaterActivity">
 
     <android.support.design.widget.BottomNavigationView
