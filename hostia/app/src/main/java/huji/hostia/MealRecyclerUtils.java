@@ -66,7 +66,7 @@ public class MealRecyclerUtils {
             Meal meal = getItem(position);
             holder.description.setText(meal.getDescription());
             holder.name.setText(meal.getName());
-            holder.stock.setText(meal.getStock());
+//            holder.stock.setText(meal.getStock());
         }
     }
 
@@ -74,14 +74,14 @@ public class MealRecyclerUtils {
     static class MealHolder extends RecyclerView.ViewHolder {
         public final TextView description;
         public final TextView name;
-        public final TextView stock;
+//        public final TextView stock;
 
 
         public MealHolder(View itemView) {
             super(itemView);
             description = itemView.findViewById(R.id.meal_description);
             name = itemView.findViewById(R.id.meal_name);
-            stock = itemView.findViewById(R.id.meal_stock);
+//            stock = itemView.findViewById(R.id.meal_stock);
 
         }
     }

@@ -49,7 +49,7 @@ public class MealAdder_a extends AppCompatActivity implements View.OnClickListen
 
         HashMap<String, String> mealMap = new HashMap<>();
         mealMap.put("meal Json", mealJson);
-        FirebaseFirestore.getInstance().collection("meals").document(meal.getID().toString()).set(mealMap)
+        FirebaseFirestore.getInstance().collection("meals").document(meal.getId().toString()).set(mealMap)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

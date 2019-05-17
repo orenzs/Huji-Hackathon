@@ -70,6 +70,7 @@ public class MainEaterActivity extends AppCompatActivity {
 
         @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().hide(); //hide the title bar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_meals);
         BottomNavigationView navView = findViewById(R.id.nav_view);

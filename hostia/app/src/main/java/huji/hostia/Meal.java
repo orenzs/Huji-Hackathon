@@ -28,7 +28,7 @@ public class Meal {
 
 
     String getStock() {
-        return stock.toString();
+        return "Stock: " + stock.toString();
     }
 
     public String getName() {

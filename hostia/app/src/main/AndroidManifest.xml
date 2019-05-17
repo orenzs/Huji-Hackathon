@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".DonorsLogin" />
         <activity android:name=".RestaurantMealsActivity" />
+        <activity android:name=".MainEaterActivity" />
     </application>
 
 </manifest>
