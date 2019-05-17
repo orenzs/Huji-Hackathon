@@ -19,32 +19,43 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:layout_width="165sp"
             android:layout_height="45dp"
-            android:layout_marginStart="108dp"
-            android:layout_marginTop="260dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="352dp"
+            android:layout_marginEnd="24dp"
             android:background="#C6B272"
-            android:fontFamily="Inconsolata"
             android:text="Users Login"
             android:textColor="#824554"
-            android:textSize="16sp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
+            android:layout_width="165sp"
             android:layout_height="45dp"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="328dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="416dp"
+            android:layout_marginEnd="24dp"
             android:background="#C6B272"
-            android:fontFamily="Inconsolata"
             android:text="Restaurant Login"
             android:textAlignment="center"
             android:textColor="#824554"
-            android:textSize="16sp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="413dp"
+            android:layout_height="332dp"
+            app:srcCompat="@mipmap/ic_launcher_foreground"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="45dp"
+            tools:srcCompat="@mipmap/ic_launcher_foreground" />
 
     </android.support.constraint.ConstraintLayout>
 
