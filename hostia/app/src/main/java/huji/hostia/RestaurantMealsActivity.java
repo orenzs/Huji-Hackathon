@@ -13,7 +13,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-public class RestaurantMealsActivity extends AppCompatActivity implements View.OnClickListener {
+public class RestaurantMealsActivity extends AppCompatActivity {
 
     private MealRecyclerUtils.MealsAdapter adapter;
     @Override
@@ -21,12 +21,16 @@ public class RestaurantMealsActivity extends AppCompatActivity implements View.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_meals);
         getSupportActionBar().hide(); //hide the title bar
-        View v = findViewById(R.id.add_meal_button);
-        v.setOnClickListener(this);
+        findViewById(R.id.add_meal_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doStuff();
+            }
+        });
 
         // Inflate the layout for this fragment
         adapter = new MealRecyclerUtils.MealsAdapter();
-        RecyclerView recyclerView = v.findViewById(R.id.add_meal_button);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
 //        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
@@ -46,8 +50,8 @@ public class RestaurantMealsActivity extends AppCompatActivity implements View.O
         });
     }
 
-    @Override
-    public void onClick(View v) {
+    public void doStuff() {
+        Log.d("rests", "onClick: ");
         try {
             Intent myIntent = new Intent(RestaurantMealsActivity.this, MealAdder_a.class);
             myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
