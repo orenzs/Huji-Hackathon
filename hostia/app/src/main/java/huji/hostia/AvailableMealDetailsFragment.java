@@ -18,7 +18,7 @@ public class AvailableMealDetailsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflate the layout_for_meal_adder for this fragment
         return inflater.inflate(R.layout.fragment_available_meal_details, container, false);
     }
 

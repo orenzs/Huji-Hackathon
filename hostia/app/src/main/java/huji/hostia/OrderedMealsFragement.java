@@ -22,7 +22,7 @@ public class OrderedMealsFragement extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflate the layout_for_meal_adder for this fragment
 //        RecyclerView recyclerView = findViewById(R.id.chat_message_recycler);
 //
 //        recyclerView.setLayoutManager(new LinearLayoutManager(

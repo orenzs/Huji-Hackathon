@@ -29,7 +29,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         }
         else {
             Intent myIntent = new Intent(Login.this, DonorsLogin.class);
-            Log.d("start", ".\n\nMessage(String text)\n\n." + "suh");
             myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(myIntent);
         }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UsersLogin"></activity>
+        <activity android:name=".MealAdder_a"></activity>
+        <activity android:name=".UsersLogin" />
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login"
@@ -20,8 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RestaurantMealsActivity"></activity>
         <activity android:name=".DonorsLogin" />
+        <activity android:name=".RestaurantMealsActivity" />
     </application>
 
 </manifest>
