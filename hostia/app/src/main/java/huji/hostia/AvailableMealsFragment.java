@@ -53,7 +53,6 @@ public class AvailableMealsFragment extends Fragment implements MealRecyclerUtil
                         availableMeals.add(meal);
                 }
                 adapter.submitList(availableMeals);
-                adapter.submitList(availableMeals);
                 Log.d(TAG, "onChanged");
             }
         });
