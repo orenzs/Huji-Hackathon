@@ -4,6 +4,7 @@ import android.util.LongSparseArray;
 
 
 public class Meal {
+    private boolean ordered = false;
     private final String name;
     private final Long id;
     private LongSparseArray<Long> orders;  // Map<id, Number_of_orders>
@@ -25,6 +26,7 @@ public class Meal {
         this.stock = 0;
         this.description = "";
     }
+
 
 
     String getStock() {

@@ -2,6 +2,7 @@ package huji.hostia;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -55,6 +56,7 @@ public class OrderedMealsFragement extends Fragment implements MealRecyclerUtils
 
     @Override
     public void mealOnClick(Meal meal) {
-
+        Intent intent = new Intent(OrderedMealsFragement.this, MapsActivity.class).putExtra("restaurantId", meal.getName());
+        startActivity(intent);
     }
 }
