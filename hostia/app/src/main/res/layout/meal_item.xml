@@ -5,23 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#824554"
-    android:paddingTop="8dp">
+    android:paddingTop="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
 
 
-    <TextView
-        android:id="@+id/meal_stock"
-        android:layout_width="74dp"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imageView5"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginBottom="60dp"
-        android:layout_toEndOf="@+id/meal_name"
-        android:gravity="center"
-        android:text="0/0"
-        android:textColor="#C6B272"
-        android:textStyle="bold" />
+    <!--<TextView-->
+        <!--android:id="@+id/meal_stock"-->
+        <!--android:layout_width="103dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignEnd="@+id/imageView5"-->
+        <!--android:layout_marginStart="29dp"-->
+        <!--android:layout_marginTop="23dp"-->
+        <!--android:layout_marginEnd="112dp"-->
+        <!--android:layout_marginBottom="60dp"-->
+        <!--android:layout_toEndOf="@+id/meal_name"-->
+        <!--android:gravity="start"-->
+        <!--android:text="0/0"-->
+        <!--android:textColor="#C6B272"-->
+        <!--android:textSize="12sp"-->
+        <!--android:textStyle="bold" />-->
 
     <TextView
     android:id="@+id/meal_description"
