@@ -6,14 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".RestaurantMealsActivity">
 
-    <Button
-        android:id="@+id/addMeal"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/add_meal_button"
+        android:layout_alignBottom="@+id/add_meal_button"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="22dp"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/add_meal_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginBottom="15dp"
-        android:text="Button" />
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp" >
+
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>
