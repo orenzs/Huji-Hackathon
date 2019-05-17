@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="#824554"
 tools:context=".UsersLogin">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="335dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="396dp"
+        android:cropToPadding="false"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
 
     <Button
         android:id="@+id/usersLoginBtn"
@@ -37,10 +49,10 @@ tools:context=".UsersLogin">
     android:ems="10"
     android:inputType="textPassword" />
 
-<TextView
+    <TextView
     android:id="@+id/textView"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+        android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
     android:layout_alignParentEnd="true"
     android:layout_marginTop="253dp"
@@ -48,14 +60,15 @@ tools:context=".UsersLogin">
     android:textColor="#C6B272"
     android:text="Email / User name" />
 
-<TextView
+    <TextView
     android:id="@+id/textView2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
     android:layout_marginTop="325dp"
     android:layout_marginEnd="247dp"
     android:textColor="#C6B272"
     android:text="Password" />
+
 </RelativeLayout>
