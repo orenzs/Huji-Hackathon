@@ -24,30 +24,30 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/meal_description"
-        android:layout_width="284dp"
-        android:layout_height="43dp"
+    android:id="@+id/meal_description"
+    android:layout_width="284dp"
+    android:layout_height="43dp"
 
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="15dp"
-        android:gravity="center|start"
-        android:text="very good pizza with olives very good pizza with olives. very good pizza with olives"
-        android:textColor="#C6B272"
-        android:textSize="13sp" />
+    android:layout_marginStart="17dp"
+    android:layout_marginTop="42dp"
+    android:layout_marginEnd="94dp"
+    android:layout_marginBottom="15dp"
+    android:gravity="center|start"
+    android:text="very good pizza with olives very good pizza with olives. very good pizza with olives"
+    android:textColor="#C6B272"
+    android:textSize="13sp" />
 
     <TextView
-        android:id="@+id/meal_name"
-        android:layout_width="149dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="52dp"
-        android:gravity="top|start"
-        android:text="Pizza"
-        android:textColor="#C6B272"
-        android:textSize="25sp" />
+    android:id="@+id/meal_name"
+    android:layout_width="149dp"
+    android:layout_height="35dp"
+    android:layout_marginStart="17dp"
+    android:layout_marginTop="13dp"
+    android:layout_marginBottom="52dp"
+    android:gravity="top|start"
+    android:text="Pizza"
+    android:textColor="#C6B272"
+    android:textSize="25sp" />
 
 
     <!--<android.support.v7.widget.CardView-->
@@ -65,11 +65,11 @@
     <!--app:cardCornerRadius="40dp"/>-->
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="1dp"
-        app:srcCompat="@mipmap/aroma_loga_layer" />
+    android:id="@+id/imageView5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="1dp"
+    app:srcCompat="@mipmap/aroma_loga_layer" />
 
 </RelativeLayout>

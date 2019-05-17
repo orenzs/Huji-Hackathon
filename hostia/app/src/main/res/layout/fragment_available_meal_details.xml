@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".AvailableMealDetailsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Update blank fragment layout_for_meal_adder -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
