@@ -44,7 +44,7 @@ public class Meal {
         return id;
     }
 
-    String getDescription() {
+    public String getDescription() {
         return description;
     }
 

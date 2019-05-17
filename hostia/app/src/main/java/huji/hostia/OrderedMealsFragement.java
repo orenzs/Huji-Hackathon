@@ -2,8 +2,6 @@ package huji.hostia;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,26 +15,26 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 
-public class OrderedMealsFragement extends Fragment implements OnClickCallBack{
-    private MealListAdapter adapter = new MealListAdapter();
+public class OrderedMealsFragement extends Fragment implements MealRecyclerUtils.MealOnClickCallBack {
+    private MealRecyclerUtils.MealsAdapter adapter; // = new MealListAdapter();
+    RecyclerView recyclerView;
     private final static String TAG = "Ordered meals fragment";
     public OrderedMealsFragement() {
         // Required empty public constructor
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_ordered_meals_fragement, container, false);
-
-        RecyclerView recyclerView = v.findViewById(R.id.ordered_meals_recycler_view);
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-
+        adapter = new MealRecyclerUtils.MealsAdapter();
+        recyclerView = v.findViewById(R.id.ordered_meals_recycler_view);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
-
-        adapter.onClickCallBack = this;
+        adapter.callback = this;
 
         MyViewModel viewModel = ViewModelProviders.of(this).get(MyViewModel.class);
         viewModel.getMeals().observe(this, new Observer<ArrayList<Meal>>() {
@@ -46,7 +44,7 @@ public class OrderedMealsFragement extends Fragment implements OnClickCallBack{
                 Log.d(TAG, "onChanged");
             }
         });
-        return inflater.inflate(R.layout.fragment_ordered_meals_fragement, container, false);
+        return v; //inflater.inflate(R.layout.fragment_ordered_meals_fragement, container, false);
     }
 
     @Override
@@ -54,9 +52,9 @@ public class OrderedMealsFragement extends Fragment implements OnClickCallBack{
         super.onActivityCreated(savedInstanceState);
     }
 
+
     @Override
-    public void onMealClick(Meal meal) {
-        ((MainEaterActivity)getActivity()).onClickOrderedMeal(meal);
+    public void mealOnClick(Meal meal) {
 
     }
 }

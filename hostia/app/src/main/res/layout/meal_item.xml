@@ -4,102 +4,106 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="8dp"
-    android:background="#E8E7E7">
+    android:background="#824554"
+    android:paddingTop="8dp">
 
     <!--meal name-->
-    <TextView
-        android:id="@+id/meal_block"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/meal_block"
-        android:gravity="center_vertical|start"
-        android:padding="8dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textSize="30sp" />
+    <!--<TextView-->
+    <!--android:id="@+id/meal_block"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:background="824554"-->
+    <!--android:gravity="center_vertical|start"-->
+    <!--android:padding="8dp"-->
+    <!--android:textAppearance="@style/TextAppearance.AppCompat.Headline"-->
+    <!--android:textSize="30sp" />-->
 
-    <TextView
-        android:id="@+id/meal_stock"
-        android:layout_width="55dp"
-        android:layout_height="17dp"
-        android:layout_alignStart="@+id/meal_block"
-        android:layout_alignTop="@+id/meal_block"
-        android:layout_alignEnd="@+id/meal_block"
-        android:layout_alignBottom="@+id/meal_block"
-        android:layout_marginStart="251dp"
-        android:layout_marginLeft="@+id/meal_block"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="60dp"
-        android:gravity="center"
-        android:text="0/0"
-        android:textStyle="bold" />
+    <!--<TextView-->
+    <!--android:id="@+id/meal_stock"-->
+    <!--android:layout_width="55dp"-->
+    <!--android:layout_height="17dp"-->
+    <!--android:layout_alignStart="@+id/meal_block"-->
+    <!--android:layout_alignTop="@+id/meal_block"-->
+    <!--android:layout_alignEnd="@+id/meal_block"-->
+    <!--android:layout_alignBottom="@+id/meal_block"-->
+    <!--android:layout_marginStart="251dp"-->
+    <!--android:layout_marginLeft="@+id/meal_block"-->
+    <!--android:layout_marginTop="23dp"-->
+    <!--android:layout_marginEnd="88dp"-->
+    <!--android:layout_marginBottom="60dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="0/0"-->
+    <!--android:textColor="#C6B272"-->
+    <!--android:textStyle="bold" />-->
 
-    <ImageView
-        android:id="@+id/meal_image"
-
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_alignStart="@+id/meal_block"
-        android:layout_alignTop="@+id/meal_block"
-        android:layout_alignBottom="@+id/meal_block"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="311dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="15dp"
-        app:srcCompat="@color/colorAccent" />
-
+    <!--<TextView-->
+    <!--android:id="@+id/meal_description"-->
+    <!--android:layout_width="284dp"-->
+    <!--android:layout_height="43dp"-->
+    <!--android:layout_alignStart="@+id/meal_block"-->
+    <!--android:layout_alignTop="@+id/meal_block"-->
+    <!--android:layout_alignEnd="@+id/meal_block"-->
+    <!--android:layout_alignBottom="@+id/meal_block"-->
+    <!--android:layout_marginStart="17dp"-->
+    <!--android:layout_marginTop="42dp"-->
+    <!--android:layout_marginEnd="94dp"-->
+    <!--android:layout_marginBottom="15dp"-->
+    <!--android:gravity="center|start"-->
+    <!--android:text="very good pizza with olives very good pizza with olives. very good pizza with olives"-->
+    <!--android:textColor="#C6B272"-->
+    <!--android:textSize="13sp" />-->
     <TextView
         android:id="@+id/meal_description"
         android:layout_width="284dp"
         android:layout_height="43dp"
-        android:layout_alignStart="@+id/meal_block"
-        android:layout_alignTop="@+id/meal_block"
-        android:layout_alignEnd="@+id/meal_block"
-        android:layout_alignBottom="@+id/meal_block"
         android:layout_marginStart="17dp"
         android:layout_marginTop="42dp"
         android:layout_marginEnd="94dp"
         android:layout_marginBottom="15dp"
         android:gravity="center|start"
         android:text="very good pizza with olives very good pizza with olives. very good pizza with olives"
+        android:textColor="#C6B272"
         android:textSize="13sp" />
+    <!--<TextView-->
+    <!--android:id="@+id/meal_name"-->
+    <!--android:layout_width="149dp"-->
+    <!--android:layout_height="35dp"-->
+    <!--android:layout_alignStart="@+id/meal_block"-->
+    <!--android:layout_alignTop="@+id/meal_block"-->
+    <!--android:layout_alignBottom="@+id/meal_block"-->
+    <!--android:layout_marginStart="17dp"-->
+    <!--android:layout_marginTop="13dp"-->
+    <!--android:layout_marginBottom="52dp"-->
+    <!--android:gravity="top|start"-->
+    <!--android:text="Pizza"-->
+    <!--android:textColor="#C6B272"-->
+    <!--android:textSize="25sp" />-->
 
-    <TextView
-        android:id="@+id/meal_name"
-        android:layout_width="149dp"
-        android:layout_height="35dp"
-        android:layout_alignStart="@+id/meal_block"
-        android:layout_alignTop="@+id/meal_block"
-        android:layout_alignBottom="@+id/meal_block"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="52dp"
-        android:gravity="top|start"
-        android:text="pizza"
-        android:textSize="25sp" />
 
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/view2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="73dp"-->
+    <!--android:layout_alignStart="@+id/meal_block"-->
+    <!--android:layout_alignTop="@+id/meal_block"-->
+    <!--android:layout_alignBottom="@+id/meal_block"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginStart="309dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:layout_marginBottom="11dp"-->
+    <!--android:elevation="12dp"-->
+    <!--android:innerRadius="0dp"-->
+    <!--android:shape="ring"-->
+    <!--android:thicknessRatio="1.9"-->
+    <!--app:cardCornerRadius="40dp"/>-->
 
-    <android.support.v7.widget.CardView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:elevation="12dp"
-        android:id="@+id/view2"
-        app:cardCornerRadius="40dp"
-        android:layout_centerHorizontal="true"
-        android:innerRadius="0dp"
-        android:shape="ring"
-        android:thicknessRatio="1.9">
-        <ImageView
-            android:layout_height="80dp"
-            android:layout_width="match_parent"
-            android:id="@+id/imageView1"
-            android:src="@drawable/YOUR_IMAGE"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true">
-        </ImageView>
-    </android.support.v7.widget.CardView>
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView5"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_marginEnd="1dp"-->
+    <!--app:srcCompat="@mipmap/aroma_loga_layer" />-->
 </RelativeLayout>

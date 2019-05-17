@@ -13,7 +13,7 @@ class MealUtils {
 
         @Override
         public boolean areContentsTheSame(@NonNull Meal msg1, @NonNull Meal msg2) {
-            return msg1.getID().equals(msg2.getID());
+            return msg1.getId().equals(msg2.getId());
         }
     }
 }

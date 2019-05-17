@@ -17,8 +17,10 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainEaterActivity extends AppCompatActivity {
 
@@ -76,8 +78,12 @@ public class MainEaterActivity extends AppCompatActivity {
         Log.d("View Model", "blablabla");
         Log.d("View Model", meal.getDescription());
 
+        Gson gson = new Gson();
+        String mealJson = gson.toJson(meal);
 
-        FirebaseFirestore.getInstance().collection("meals2").document(meal.getId().toString()).set(meal)
+        HashMap<String, String > mealMap = new HashMap<>();
+        mealMap.put("meal Json", mealJson);
+        FirebaseFirestore.getInstance().collection("meals2").document(meal.getId().toString()).set(mealMap)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
