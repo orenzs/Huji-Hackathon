@@ -41,11 +41,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
         String title = "Sushi";
         LatLng pos = new LatLng(31.774445,35.1910984);
-        if (restaurantId == "hamburger") {
+        if (restaurantId == "China town") {
             title = "hamburger";
             pos = new LatLng(31.774445,35.1910984);
         }
-        if (restaurantId == "Rice") {
+        if (restaurantId == "Vitrina") {
             title = "Rice";
             pos = new LatLng(31.773749,35.1700529);
         }
