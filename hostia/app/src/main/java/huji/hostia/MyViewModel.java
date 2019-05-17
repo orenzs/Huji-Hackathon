@@ -3,19 +3,19 @@ package huji.hostia;
 import android.arch.lifecycle.*;
 import android.arch.lifecycle.ViewModel;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.*;
 import com.google.firebase.firestore.EventListener;
+import com.google.gson.Gson;
 
 import java.util.*;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import javax.annotation.Nullable;
-
-import huji.hostia.Meal;
 
 public class MyViewModel extends ViewModel {
 
@@ -127,13 +127,17 @@ public class MyViewModel extends ViewModel {
         executor.execute(new Runnable() {
             @Override
             public void run() {
-                db.collection("meals").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                db.collection("meals2").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         ArrayList<Meal> mealsFromDB = new ArrayList<>();
                         if (task.isSuccessful()) {
                             for(DocumentSnapshot document : task.getResult()) {
-                                mealsFromDB.add(document.toObject(Meal.class));
+                                String json = document.getString("meal Json");
+                                Gson gson = new Gson();
+                                Meal meal = gson.fromJson(json, Meal.class);
+                                mealsFromDB.add(meal);
+                                Log.d("view model", "read json: " + meal.getDescription());
                             }
                             meals.setValue(mealsFromDB);
                         }
