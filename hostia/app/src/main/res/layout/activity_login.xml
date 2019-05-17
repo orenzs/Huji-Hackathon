@@ -14,7 +14,7 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
-            android:layout_height="340dp"
+            android:layout_height="341dp"
             android:background="#824554"
             android:fontFamily="Inconsolata"
             android:text="Users\nLogin"
