@@ -68,7 +68,6 @@ public class AvailableMealsFragment extends Fragment implements MealRecyclerUtil
     @Override
     public void mealOnClick(Meal meal) {
         meal.ordered = true;
-
         Gson gson = new Gson();
         String mealJson = gson.toJson(meal);
 
