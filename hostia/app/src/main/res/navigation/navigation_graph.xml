@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/availableMealsFragment">
+    <fragment
+        android:id="@+id/availableMealsFragment"
+        android:name="huji.hostia.AvailableMealsFragment"
+        android:label="fragment_available_meals"
+        tools:layout="@layout/fragment_available_meals" >
+        <action
+            android:id="@+id/action_availableMealsFragment_to_orderedMealsFragement"
+            app:destination="@id/orderedMealsFragement" />
+        <action
+            android:id="@+id/action_availableMealsFragment_to_availableMealDetailsFragment"
+            app:destination="@id/availableMealDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderedMealsFragement"
+        android:name="huji.hostia.OrderedMealsFragement"
+        android:label="fragment_ordered_meals_fragement"
+        tools:layout="@layout/fragment_ordered_meals_fragement" >
+        <action
+            android:id="@+id/action_orderedMealsFragement_to_availableMealsFragment"
+            app:destination="@id/availableMealsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_orderedMealsFragement_to_orderedMealDetailsFragment"
+            app:destination="@id/orderedMealDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderedMealDetailsFragment"
+        android:name="huji.hostia.OrderedMealDetailsFragment"
+        android:label="fragment_ordered_meal_details"
+        tools:layout="@layout/fragment_ordered_meal_details" />
+    <fragment
+        android:id="@+id/availableMealDetailsFragment"
+        android:name="huji.hostia.AvailableMealDetailsFragment"
+        android:label="fragment_available_meal_details"
+        tools:layout="@layout/fragment_available_meal_details" />
+</navigation>

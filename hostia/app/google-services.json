@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "358378019835",
+    "firebase_url": "https://ffoodthrower.firebaseio.com",
+    "project_id": "ffoodthrower",
+    "storage_bucket": "ffoodthrower.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358378019835:android:007edf0fd170ae4a",
+        "android_client_info": {
+          "package_name": "huji.hostia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358378019835-s87pgn302jv4pdindo8b4i8fiansvc3f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN7ghElpgkY3kO9xhwSMvFJRCJarRyZyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358378019835-s87pgn302jv4pdindo8b4i8fiansvc3f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
