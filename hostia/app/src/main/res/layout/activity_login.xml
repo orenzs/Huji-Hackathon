@@ -6,31 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="752dp"
+        app:srcCompat="@color/colorAccent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="340dp"
-            android:background="#824554"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="260dp"
+            android:background="#C6B272"
             android:fontFamily="Inconsolata"
-            android:text="Users\nLogin"
-            android:textColor="#C6B272"
-            android:textSize="150px" />
+            android:text="Users Login"
+            android:textColor="#824554"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
-            android:layout_height="339dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="328dp"
             android:background="#C6B272"
-            android:textColor="#824554"
             android:fontFamily="Inconsolata"
             android:text="Restaurant Login"
             android:textAlignment="center"
-            android:textSize="150px" />
-    </LinearLayout>
+            android:textColor="#824554"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.design.widget.CoordinatorLayout>
