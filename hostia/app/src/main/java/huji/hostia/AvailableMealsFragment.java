@@ -14,7 +14,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class AvailableMealsFragment extends Fragment implements MealRecyclerUtils.MealOnClickCallBack {
@@ -42,7 +47,13 @@ public class AvailableMealsFragment extends Fragment implements MealRecyclerUtil
         viewModel.getMeals().observe(this, new Observer<ArrayList<Meal>>() {
             @Override
             public void onChanged(@Nullable ArrayList<Meal> meals) {
-                adapter.submitList(meals);
+                ArrayList<Meal> availableMeals = new ArrayList<>();
+                for (Meal meal : meals) {
+                    if (!meal.ordered)
+                        availableMeals.add(meal);
+                }
+                adapter.submitList(availableMeals);
+                adapter.submitList(availableMeals);
                 Log.d(TAG, "onChanged");
             }
         });
@@ -57,6 +68,19 @@ public class AvailableMealsFragment extends Fragment implements MealRecyclerUtil
 
     @Override
     public void mealOnClick(Meal meal) {
+        meal.ordered = true;
 
+        Gson gson = new Gson();
+        String mealJson = gson.toJson(meal);
+
+        HashMap<String, String> mealMap = new HashMap<>();
+        mealMap.put("meal Json", mealJson);
+        FirebaseFirestore.getInstance().collection("meals2").document(meal.getId().toString()).set(mealMap)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("View Model", "Success!!!");
+                    }
+                });
     }
 }

@@ -72,6 +72,7 @@ public class MainEaterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_meals);
+        getSupportActionBar().hide();
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         Meal meal = new Meal("hamburger", 16L, 3, "yam yam");
